@@ -1,8 +1,10 @@
 ﻿public class IdleBattleManagerState : IBattleManagerState
 {
-    public void OnEnter(BattleManager battleManager)
+    BattleManager battleManager;
+
+    public void OnEnter(BattleManager bm)
     {
-        // do nothing
+        battleManager = bm;
     }
 
     public void OnExit()
@@ -12,7 +14,7 @@
 
     public void Update()
     {
-        // for each actor in idle state, increase their progress bar by speed * deltaTime * BattleSpeed
+        // do nothing
     }
 
     public bool Pop

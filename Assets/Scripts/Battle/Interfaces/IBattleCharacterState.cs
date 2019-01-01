@@ -1,6 +1,6 @@
 ﻿public interface IBattleCharacterState
 {
-    void OnEnter();
+    void OnEnter(BattleCharacter battleCharacter);
     void OnExit();
     void Update();
 }
