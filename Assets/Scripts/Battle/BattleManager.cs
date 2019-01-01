@@ -3,7 +3,6 @@ using UnityEngine;
 
 public class BattleManager : MonoBehaviour
 {
-    [SerializeField]
     Stack<IBattleManagerState> states;
     List<BattleCharacter> battleCharacters;
     Queue<BattleAction> battleActions;
@@ -12,23 +11,24 @@ public class BattleManager : MonoBehaviour
     {
         get { return battleCharacters; }
     }
+    
+    void Update()
+    {
+        states.Peek().Update();
+    }
 
-    void Awake()
+    public void Init(BattleConfig config) // TODO: should take a battleConfig object as an argument to init everything
     {
         battleActions = new Queue<BattleAction>();
         battleCharacters = new List<BattleCharacter>();
         states = new Stack<IBattleManagerState>();
 
-        states.Push(new IntroBattleManagerState());
+        states.Push(config.initialState ?? new IntroBattleManagerState());
         states.Peek().OnEnter(this);
 
-        // battle manager should init everything.  battle scene should be blank with this script on which loads the
-        // appropriate level/actors based on the config object passed to it
-    }
-    
-    void Update()
-    {
-        states.Peek().Update();
+        // battle scene should be a level with this script on which loads the
+        // appropriate actors based on the config object passed to it
+        // as well as what state the battle should start in ie. back attack, first strike etc
     }
 
     public void ChangeState(IBattleManagerState newState)
