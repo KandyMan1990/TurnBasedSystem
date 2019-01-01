@@ -22,5 +22,5 @@ public abstract class BattleCharacter : MonoBehaviour
     }
 
     // TODO: seperate classes for enemy/player characters
-    // TODO: create states for ready to perform, performing, on hit?, low health (not for enemy), dead
+    // TODO: create states for ready to perform, performing, on hit?, low health (not for enemy)
 }
