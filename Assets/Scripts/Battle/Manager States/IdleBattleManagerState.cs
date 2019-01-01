@@ -1,4 +1,5 @@
-﻿public class IdleBattleManagerState : IBattleManagerState
+﻿[System.Serializable]
+public class IdleBattleManagerState : IBattleManagerState
 {
     BattleManager battleManager;
 

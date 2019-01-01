@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 
+[System.Serializable]
 public class IdleBattleCharacterState : IBattleCharacterState
 {
     const float maxValue = 255f;

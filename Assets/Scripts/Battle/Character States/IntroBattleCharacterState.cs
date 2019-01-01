@@ -1,4 +1,5 @@
-﻿public class IntroBattleCharacterState : IBattleCharacterState
+﻿[System.Serializable]
+public class IntroBattleCharacterState : IBattleCharacterState
 {
     BattleCharacter battleCharacter;
     bool introFinished = false;

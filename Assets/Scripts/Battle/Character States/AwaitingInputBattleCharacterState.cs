@@ -1,4 +1,5 @@
-﻿public class AwaitingInputBattleCharacterState : IBattleCharacterState
+﻿[System.Serializable]
+public class AwaitingInputBattleCharacterState : IBattleCharacterState
 {
     public void OnEnter(BattleCharacter battleCharacter)
     {

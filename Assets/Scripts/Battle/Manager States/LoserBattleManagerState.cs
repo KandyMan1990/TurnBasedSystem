@@ -1,4 +1,5 @@
-﻿public class LoserBattleManagerState : IBattleManagerState
+﻿[System.Serializable]
+public class LoserBattleManagerState : IBattleManagerState
 {
     public void OnEnter(BattleManager battleManager)
     {

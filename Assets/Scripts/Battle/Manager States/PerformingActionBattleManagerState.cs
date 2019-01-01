@@ -1,4 +1,5 @@
-﻿public class PerformingActionBattleManagerState : IBattleManagerState
+﻿[System.Serializable]
+public class PerformingActionBattleManagerState : IBattleManagerState
 {
     public void OnEnter(BattleManager battleManager)
     {

@@ -1,4 +1,5 @@
-﻿public class CinematicBattleManagerState : IBattleManagerState
+﻿[System.Serializable]
+public class CinematicBattleManagerState : IBattleManagerState
 {
     public void OnEnter(BattleManager battleManager)
     {

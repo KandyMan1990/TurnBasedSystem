@@ -1,5 +1,6 @@
 ﻿using System.Linq;
 
+[System.Serializable]
 public class IntroBattleManagerState : IBattleManagerState
 {
     BattleManager battleManager;
