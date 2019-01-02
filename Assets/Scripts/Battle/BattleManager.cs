@@ -50,7 +50,11 @@ public class BattleManager : MonoBehaviour
             states.Pop();
         }
 
-        states.Push(newState);
+        if (newState != null)
+        {
+            states.Push(newState);
+        }
+
         states.Peek().OnEnter(this);
     }
 }
